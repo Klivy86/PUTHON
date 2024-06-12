@@ -9,8 +9,7 @@ random.shuffle(lst)
 data = pd.DataFrame({'whoAmI': lst})
 
 # Инициализация OneHotEncoder
-encoder = OneHotEncoder(sparse_output=False)  # Для новых версий sklearn
-# encoder = OneHotEncoder(sparse=False)  # Для старых версий sklearn
+encoder = OneHotEncoder(sparse_output=False)  
 
 # Преобразование данных в one-hot представление
 one_hot_encoded_data = encoder.fit_transform(data[['whoAmI']])
